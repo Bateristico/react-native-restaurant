@@ -1,5 +1,5 @@
 import axios from 'axios';
-const { API_KEY } = process.env;
+const API_KEY = process.env.API_KEY;
 
 export default axios.create({
   baseURL: 'https://api.yelp.com/v3/businesses',
