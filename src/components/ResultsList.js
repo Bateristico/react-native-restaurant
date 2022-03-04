@@ -4,6 +4,11 @@ import ResultsDetail from './ResultsDetail';
 import { withNavigation } from 'react-navigation';
 
 const ResultsList = ({ title, results, navigation }) => {
+  // dont show anything until the info is fetched
+  if (!results.length) {
+    return null;
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{title}</Text>
